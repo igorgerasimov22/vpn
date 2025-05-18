@@ -1,0 +1,12 @@
+client
+dev {{ openvpn_device }}
+proto {{ openvpn_proto }}
+remote {{ server_ip }} {{ openvpn_port }}
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+cipher AES-256-CBC
+comp-lzo
+verb 3
